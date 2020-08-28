@@ -1,0 +1,210 @@
+[18-Aug-2020 08:08:57 UTC] An Error occurred while handling another error:
+PDOException: SQLSTATE[28000] [1045] Access denied for user 'app'@'localhost' (using password: YES) in /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'app', 'aPGb5ByZKPod1WW...', NULL)
+#1 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(1153): yii\db\Command->prepare(true)
+#6 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('cms_site_domain')
+#10 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%cms_site_dom...', 'schema', false)
+#11 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/ActiveRecord.php(390): yii\db\Schema->getTableSchema('{{%cms_site_dom...')
+#12 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/ActiveRecord.php(74): yii\db\ActiveRecord::getTableSchema()
+#13 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(733): skeeks\cms\base\ActiveRecord->behaviors()
+#14 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(603): yii\base\Component->ensureBehaviors()
+#15 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/BaseActiveRecord.php(933): yii\base\Component->trigger('init')
+#16 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#17 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/components/CurrentSite.php(42): yii\base\BaseObject->__construct()
+#18 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(139): skeeks\cms\components\CurrentSite->getSite()
+#19 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/Component.php(192): yii\base\Component->__get('site')
+#20 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): skeeks\cms\base\Component->init()
+#21 [internal function]: yii\base\BaseObject->__construct(Array)
+#22 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#23 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('common\\componen...', Array, Array)
+#24 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('common\\componen...', Array, Array)
+#25 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#26 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('templateSmarty', true)
+#27 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/ServiceLocator.php(74): yii\base\Module->get('templateSmarty')
+#28 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/frontend/templates/default/layouts/main.php(13): yii\di\ServiceLocator->__get('templateSmarty')
+#29 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/View.php(348): require('/home/kepdnaae/...')
+#30 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/kepdnaae/...', Array)
+#31 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/kepdnaae/...', Array, Object(skeeks\cms\controllers\ErrorController))
+#32 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#33 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/Controller.php(55): yii\base\Controller->render('@app/views/modu...', Array)
+#34 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/actions/ErrorAction.php(93): skeeks\cms\base\Controller->render('error', Array)
+#35 [internal function]: skeeks\cms\actions\ErrorAction->run()
+#36 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#37 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#38 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#39 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('cms/error/error')
+#40 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#41 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#42 {main}
+
+Next yii\db\Exception: SQLSTATE[28000] [1045] Access denied for user 'app'@'localhost' (using password: YES) in /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(1153): yii\db\Command->prepare(true)
+#4 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('cms_site_domain')
+#8 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%cms_site_dom...', 'schema', false)
+#9 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/ActiveRecord.php(390): yii\db\Schema->getTableSchema('{{%cms_site_dom...')
+#10 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/ActiveRecord.php(74): yii\db\ActiveRecord::getTableSchema()
+#11 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(733): skeeks\cms\base\ActiveRecord->behaviors()
+#12 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(603): yii\base\Component->ensureBehaviors()
+#13 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/BaseActiveRecord.php(933): yii\base\Component->trigger('init')
+#14 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#15 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/components/CurrentSite.php(42): yii\base\BaseObject->__construct()
+#16 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(139): skeeks\cms\components\CurrentSite->getSite()
+#17 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/Component.php(192): yii\base\Component->__get('site')
+#18 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): skeeks\cms\base\Component->init()
+#19 [internal function]: yii\base\BaseObject->__construct(Array)
+#20 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#21 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('common\\componen...', Array, Array)
+#22 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('common\\componen...', Array, Array)
+#23 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#24 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('templateSmarty', true)
+#25 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/ServiceLocator.php(74): yii\base\Module->get('templateSmarty')
+#26 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/frontend/templates/default/layouts/main.php(13): yii\di\ServiceLocator->__get('templateSmarty')
+#27 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/View.php(348): require('/home/kepdnaae/...')
+#28 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/kepdnaae/...', Array)
+#29 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/home/kepdnaae/...', Array, Object(skeeks\cms\controllers\ErrorController))
+#30 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#31 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/Controller.php(55): yii\base\Controller->render('@app/views/modu...', Array)
+#32 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/actions/ErrorAction.php(93): skeeks\cms\base\Controller->render('error', Array)
+#33 [internal function]: skeeks\cms\actions\ErrorAction->run()
+#34 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#35 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\Action->runWithParams(Array)
+#36 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('error', Array)
+#37 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/web/ErrorHandler.php(108): yii\base\Module->runAction('cms/error/error')
+#38 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\db\Exception))
+#39 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\db\Exception))
+#40 {main}
+Additional Information:
+
+Previous exception:
+PDOException: SQLSTATE[28000] [1045] Access denied for user 'app'@'localhost' (using password: YES) in /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'app', 'aPGb5ByZKPod1WW...', NULL)
+#1 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(1153): yii\db\Command->prepare(true)
+#6 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('cms_site_domain')
+#10 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%cms_site_dom...', 'schema', false)
+#11 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/ActiveRecord.php(390): yii\db\Schema->getTableSchema('{{%cms_site_dom...')
+#12 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/ActiveRecord.php(74): yii\db\ActiveRecord::getTableSchema()
+#13 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(733): skeeks\cms\base\ActiveRecord->behaviors()
+#14 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(603): yii\base\Component->ensureBehaviors()
+#15 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/BaseActiveRecord.php(933): yii\base\Component->trigger('init')
+#16 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#17 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/components/CurrentSite.php(42): yii\base\BaseObject->__construct()
+#18 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(139): skeeks\cms\components\CurrentSite->getSite()
+#19 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/Component.php(192): yii\base\Component->__get('site')
+#20 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms-toolbar/src/CmsToolbar.php(141): skeeks\cms\base\Component->init()
+#21 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): skeeks\cms\toolbar\CmsToolbar->init()
+#22 [internal function]: yii\base\BaseObject->__construct(Array)
+#23 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#24 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('skeeks\\cms\\tool...', Array, Array)
+#25 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('skeeks\\cms\\tool...', Array, Array)
+#26 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#27 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('cmsToolbar', true)
+#28 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Application.php(313): yii\base\Module->get('cmsToolbar')
+#29 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#30 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#31 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#32 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#33 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/app-web.php(34): yii\base\Application->__construct(Array)
+#34 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/frontend/web/index.php(20): include('/home/kepdnaae/...')
+#35 {main}
+
+Next yii\db\Exception: SQLSTATE[28000] [1045] Access denied for user 'app'@'localhost' (using password: YES) in /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(1153): yii\db\Command->prepare(true)
+#4 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('cms_site_domain')
+#8 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%cms_site_dom...', 'schema', false)
+#9 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/ActiveRecord.php(390): yii\db\Schema->getTableSchema('{{%cms_site_dom...')
+#10 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/ActiveRecord.php(74): yii\db\ActiveRecord::getTableSchema()
+#11 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(733): skeeks\cms\base\ActiveRecord->behaviors()
+#12 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(603): yii\base\Component->ensureBehaviors()
+#13 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/db/BaseActiveRecord.php(933): yii\base\Component->trigger('init')
+#14 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#15 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/components/CurrentSite.php(42): yii\base\BaseObject->__construct()
+#16 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Component.php(139): skeeks\cms\components\CurrentSite->getSite()
+#17 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/src/base/Component.php(192): yii\base\Component->__get('site')
+#18 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms-toolbar/src/CmsToolbar.php(141): skeeks\cms\base\Component->init()
+#19 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): skeeks\cms\toolbar\CmsToolbar->init()
+#20 [internal function]: yii\base\BaseObject->__construct(Array)
+#21 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#22 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('skeeks\\cms\\tool...', Array, Array)
+#23 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('skeeks\\cms\\tool...', Array, Array)
+#24 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#25 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('cmsToolbar', true)
+#26 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Application.php(313): yii\base\Module->get('cmsToolbar')
+#27 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#28 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#29 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#30 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#31 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/vendor/skeeks/cms/app-web.php(34): yii\base\Application->__construct(Array)
+#32 /home/kepdnaae/dtcentr.xyz/dtcentr.xyz/frontend/web/index.php(20): include('/home/kepdnaae/...')
+#33 {main}
+Additional Information:
+
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'PWD' => '/',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en;q=0.9',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_HOST' => 'dtcentr.xyz',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36',
+    'HTTP_DNT' => '1',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'UNIQUE_ID' => 'XzuMmFS-WMTHaN83guNw-AAAAMg',
+    'SCRIPT_URL' => '/dtcentr.xyz/frontend/web/',
+    'SCRIPT_URI' => 'http://dtcentr.xyz/dtcentr.xyz/frontend/web/',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'dtcentr.xyz',
+    'SERVER_ADDR' => '185.253.218.123',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '77.93.46.217',
+    'DOCUMENT_ROOT' => '/home/kepdnaae/dtcentr.xyz',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/kepdnaae/dtcentr.xyz',
+    'SERVER_ADMIN' => 'webmaster@dtcentr.xyz.fehuv.online',
+    'SCRIPT_FILENAME' => '/home/kepdnaae/dtcentr.xyz/dtcentr.xyz/frontend/web/index.php',
+    'REMOTE_PORT' => '50718',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/dtcentr.xyz/frontend/web/',
+    'SCRIPT_NAME' => '/dtcentr.xyz/frontend/web/index.php',
+    'PHP_SELF' => '/dtcentr.xyz/frontend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1597738136.466619014739990234375,
+    'REQUEST_TIME' => 1597738136,
+]
